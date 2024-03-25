@@ -2,11 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\media",
-    "\\app\\media\\tmdbv3api",
-    "\\app\\media\\tmdbv3api\\objs",
     "\\app\\utils",
-    "\\docker"
+    "\\docker",
+    "\\docker\\rootfs",
+    "\\docker\\rootfs\\etc",
+    "\\docker\\rootfs\\etc\\s6-overlay",
+    "\\docker\\rootfs\\etc\\s6-overlay\\s6-rc.d",
+    "\\docker\\rootfs\\etc\\s6-overlay\\s6-rc.d\\init-010-update",
+    "\\docker\\rootfs\\etc\\s6-overlay\\s6-rc.d\\svc-nastools"
   ],
   "PreviewInSolutionExplorer": false
 }
