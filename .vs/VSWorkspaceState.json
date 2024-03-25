@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
-    "\\app\\media"
+    "\\app\\media",
+    "\\docker"
   ],
-  "SelectedNode": "\\app\\media\\scraper.py",
+  "SelectedNode": "\\version.py",
   "PreviewInSolutionExplorer": false
 }
