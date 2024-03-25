@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
     "\\app\\media",
+    "\\app\\media\\tmdbv3api",
+    "\\app\\media\\tmdbv3api\\objs",
+    "\\app\\utils",
     "\\docker"
   ],
-  "SelectedNode": "\\version.py",
+  "SelectedNode": "\\app\\media\\tmdbv3api\\tmdb.py",
   "PreviewInSolutionExplorer": false
 }

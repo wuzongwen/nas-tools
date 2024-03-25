@@ -39,6 +39,8 @@ class Media:
     _chatgpt_enable = None
     _default_language = None
     _tmdb_include_adult = None
+    _tmdb_include_story = None
+    
 
     def __init__(self):
         self.init_config()
@@ -57,6 +59,8 @@ class Media:
         self._default_language = media.get("tmdb_language", "zh") or "zh"
         # TMDB是否包含成人内容
         self._tmdb_include_adult = media.get("tmdb_include_adult")
+        # 电视剧防剧透
+        self._tmdb_include_story = media.get("tmdb_include_story")
         # TMDB
         if app.get('rmt_tmdbkey'):
             # TMDB主体
@@ -73,6 +77,8 @@ class Media:
             self.tmdb.proxies = Config().get_proxies()
             # TMDB是否包含成人内容
             self.tmdb.include_adult = self._tmdb_include_adult
+            # 电视剧防剧透
+            self.tmdb.include_story = self._tmdb_include_story
             # 调试模式
             self.tmdb.debug = False
             # 查询对象

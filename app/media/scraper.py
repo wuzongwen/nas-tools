@@ -21,6 +21,7 @@ from config import Config, RMT_MEDIAEXT
 class Scraper:
     media = None
     _scraper_flag = False
+    _include_story = False
     _scraper_nfo = {}
     _scraper_pic = {}
     _rmt_mode = None
@@ -30,6 +31,7 @@ class Scraper:
         self.media = Media()
         self.douban = DouBan()
         self._scraper_flag = Config().get_config('media').get("nfo_poster")
+        self._include_story = Config().get_config('media').get("tmdb_include_story")
         scraper_conf = SystemConfig().get(SystemConfigKey.UserScraperConf)
         if scraper_conf:
             self._scraper_nfo = scraper_conf.get('scraper_nfo') or {}
@@ -350,7 +352,7 @@ class Scraper:
             uniqueid.setAttribute("default", "true")
             # tmdbid
             DomUtils.add_node(doc, root, "tmdbid", episode_detail.get("id") or "")
-            if scraper_tv_nfo.get("episode_story"):
+            if self._include_story:
                 # 标题
                 DomUtils.add_node(doc, root, "title", episode_detail.get("name") or "第 %s 集" % episode)
                 # 简介
