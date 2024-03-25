@@ -1,6 +1,7 @@
 /.idea/**
 *.pyc
 *.c
+.vs/
 /test.py
 /setup.py
 /build_sites.py
