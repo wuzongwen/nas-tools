@@ -953,33 +953,42 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-12 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-check">
-                      <input class="form-check-input" type="checkbox" id="scraper_nfo_tv_season_basic" {% if
-                        ScraperNfo and ScraperNfo.tv.season_basic %}checked{% endif %}>
-                      <span class="form-check-label">季-基础信息 </span>
-                    </label>
+                  <div class="col-12 col-lg-4">
+                      <div class="mb-3">
+                          <label class="form-check">
+                              <input class="form-check-input" type="checkbox" id="scraper_nfo_tv_season_basic" {% if
+                                     ScraperNfo and ScraperNfo.tv.season_basic %}checked{% endif %}>
+                              <span class="form-check-label">季-基础信息 </span>
+                          </label>
+                      </div>
                   </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-check">
-                      <input class="form-check-input" type="checkbox" id="scraper_nfo_tv_episode_basic" {% if
-                        ScraperNfo and ScraperNfo.tv.episode_basic %}checked{% endif %}>
-                      <span class="form-check-label">集-基础信息 </span>
-                    </label>
+                  <div class="col-12 col-lg-4">
+                      <div class="mb-3">
+                          <label class="form-check">
+                              <input class="form-check-input" type="checkbox" id="scraper_nfo_tv_episode_basic" {% if
+                                     ScraperNfo and ScraperNfo.tv.episode_basic %}checked{% endif %}>
+                              <span class="form-check-label">集-基础信息 </span>
+                          </label>
+                      </div>
                   </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-check">
-                      <input class="form-check-input" type="checkbox" id="scraper_nfo_tv_episode_credits" {% if
-                        ScraperNfo and ScraperNfo.tv.episode_credits %}checked{% endif %}>
-                      <span class="form-check-label">集-演职人员 </span>
-                    </label>
+                  <div class="col-12 col-lg-4">
+                      <div class="mb-3">
+                          <label class="form-check">
+                              <input class="form-check-input" type="checkbox" id="scraper_nfo_tv_episode_story" {% if
+                                     ScraperNfo and ScraperNfo.tv.episode_story %}checked{% endif %}>
+                              <span class="form-check-label">集-剧情 </span>
+                          </label>
+                      </div>
                   </div>
-                </div>
+                  <div class="col-12 col-lg-4">
+                      <div class="mb-3">
+                          <label class="form-check">
+                              <input class="form-check-input" type="checkbox" id="scraper_nfo_tv_episode_credits" {% if
+                                     ScraperNfo and ScraperNfo.tv.episode_credits %}checked{% endif %}>
+                              <span class="form-check-label">集-演职人员 </span>
+                          </label>
+                      </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -1322,6 +1331,7 @@
             credits_chinese: $("#scraper_nfo_tv_credits_chinese").prop('checked'),
             season_basic: $("#scraper_nfo_tv_season_basic").prop('checked'),
             episode_basic: $("#scraper_nfo_tv_episode_basic").prop('checked'),
+            episode_story: $("#scraper_nfo_tv_episode_story").prop('checked'),
             episode_credits: $("#scraper_nfo_tv_episode_credits").prop('checked'),
           }
         },

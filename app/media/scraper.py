@@ -350,13 +350,17 @@ class Scraper:
             uniqueid.setAttribute("default", "true")
             # tmdbid
             DomUtils.add_node(doc, root, "tmdbid", episode_detail.get("id") or "")
-            # 标题
-            DomUtils.add_node(doc, root, "title", episode_detail.get("name") or "第 %s 集" % episode)
-            # 简介
-            xplot = DomUtils.add_node(doc, root, "plot")
-            xplot.appendChild(doc.createCDATASection(episode_detail.get("overview") or ""))
-            xoutline = DomUtils.add_node(doc, root, "outline")
-            xoutline.appendChild(doc.createCDATASection(episode_detail.get("overview") or ""))
+            if scraper_tv_nfo.get("episode_story"):
+                # 标题
+                DomUtils.add_node(doc, root, "title", episode_detail.get("name") or "第 %s 集" % episode)
+                # 简介
+                xplot = DomUtils.add_node(doc, root, "plot")
+                xplot.appendChild(doc.createCDATASection(episode_detail.get("overview") or ""))
+                xoutline = DomUtils.add_node(doc, root, "outline")
+                xoutline.appendChild(doc.createCDATASection(episode_detail.get("overview") or ""))
+            else:
+                 # 标题
+                DomUtils.add_node(doc, root, "title", "第 %s 集" % episode)
             # 发布日期
             DomUtils.add_node(doc, root, "aired", episode_detail.get("air_date") or "")
             # 年份
