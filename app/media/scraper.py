@@ -357,9 +357,9 @@ class Scraper:
                 DomUtils.add_node(doc, root, "title", "第 %s 集" % episode)
                 # 简介
                 xplot = DomUtils.add_node(doc, root, "plot")
-                xplot.appendChild("")
+                xplot.appendChild(doc.createCDATASection(""))
                 xoutline = DomUtils.add_node(doc, root, "outline")
-                xoutline.appendChild("")
+                xoutline.appendChild(doc.createCDATASection(""))
             else:
                 # 标题
                 DomUtils.add_node(doc, root, "title", episode_detail.get("name") or "第 %s 集" % episode)
